@@ -1,0 +1,21 @@
+[submodule "meta-gplv2"]
+	path = meta-gplv2
+	url = git://git.yoctoproject.org/meta-gplv2
+[submodule "meta-openembedded"]
+	path = meta-openembedded
+	url = https://github.com/openembedded/meta-openembedded
+[submodule "poky"]
+	path = poky
+	url = https://git.yoctoproject.org/git/poky
+[submodule "meta-renesas"]
+	path = meta-renesas
+	url = https://github.com/renesas-rz/meta-renesas.git
+[submodule "meta-qt5"]
+	path = meta-qt5
+	url = https://github.com/meta-qt5/meta-qt5.git
+[submodule "meta-virtualization"]
+	path = meta-virtualization
+	url = https://git.yoctoproject.org/git/meta-virtualization
+[submodule "meta-rz-panfrost"]
+	path = meta-rz-panfrost
+	url = https://github.com/renesas-rz/meta-rz-panfrost.git
