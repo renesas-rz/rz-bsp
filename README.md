@@ -1,6 +1,6 @@
-# RZ-BSP 3.0.3+
+# RZ-BSP 3.0.6+
 
-Renesas RZ BSP environment setup (experimental for BSP 3.0.3 version onwards) 
+Renesas RZ BSP environment setup for VLP 3.0.6 onwards. Please refer to the other branches for the older setups.
 
 Please note that Panfrost is not part of the official Renesas BSP package.
 
@@ -8,7 +8,7 @@ Please note that Panfrost is not part of the official Renesas BSP package.
 
 Clone this particular branch with the following command:
 
-	git clone --recursive -b dunfell/rz_303 https://github.com/renesas-rz/rz-bsp.git
+	git clone --recursive -b dunfell/rz_306 https://github.com/renesas-rz/rz-bsp.git
 
 There are two options to configure and setup the environment afterwards:
 
@@ -24,10 +24,10 @@ You can use the setup script: bsp_setup.sh:
 
 	    -b  board for which you want build the BSP
 		rzg2l rzg2lc rzg2ul rzv2l rzg2h rzg2m rzg2n ek874
-		rzfive 
+		rzfive rzg3s
 
-	    -v  version of BSP (default BSP-3.0.3)
-		BSP-3.0.3 BSP-3.0.4 BSP-3.0.5 BSP-3.0.5-update1 BSP-3.0.5-update2 BSP-3.0.5-update3
+	    -v  version of BSP (default BSP-3.0.6-update4)
+		BSP-3.0.6 BSP-3.0.6-update1 BSP-3.0.6-update2 BSP-3.0.6-update3 BSP-3.0.6-update4
 
 	    -p  enable panfrost graphics for supported boards (default disabled)
 		Supported boards: rzg2l rzg2lc rzv2l
@@ -48,6 +48,7 @@ Please replace _**machine**_ by the name below according to your requirement:
 * RZ/G2UL Evaluation Board Kit PMIC version: smarc-rzg2u
 * RZ/V2L Evaluation Board Kit: smarc-rzv2l
 * RZ/FIVE Evaluation Board Kit: smarc-rzfive
+* RZ/G3S Evaluation Board Kit: smarc-rzg3s
 
 Common targets are:
 * core-image-minimal
@@ -62,7 +63,7 @@ Common targets are:
 	source poky/oe-init-build-env  
 
 2. Checkout the tag for the relevant BSP version. The supported versions are:   
-	`BSP-3.0.3 BSP-3.0.4 BSP-3.0.5 BSP-3.0.5-update1 BSP-3.0.5-update2 BSP-3.0.5-update3`
+	`BSP-3.0.6 BSP-3.0.6-update1 BSP-3.0.6-update2 BSP-3.0.6-update3 BSP-3.0.6-update4 `
    
    Use the following command to update the submodules:  
    `git submodule update --init --recursive`
@@ -73,6 +74,7 @@ Common targets are:
 	RZ/G2L,RZ/G2LC,RZ/G2UL Evaluation Board Kit PMIC version: rzg2l  
 	RZ/V2L Evaluation Board Kit: rzv2l  
 	RZ/FIVE Evaluation Board Kit: rzfive
+	RZ/G3S Evaluation Board Kit: rzg3s
 	
 	`TEMPLATECONF=$PWD/meta-renesas/meta-<board>/docs/template/conf/ source poky/oe-init-build-env build`
 
@@ -100,6 +102,7 @@ Please replace _**machine**_ by the name below according to your requirement:
 * RZ/G2UL Evaluation Board Kit PMIC version: smarc-rzg2u
 * RZ/V2L Evaluation Board Kit: smarc-rzv2l
 * RZ/FIVE Evaluation Board Kit: smarc-rzfive
+* RZ/G3S Evaluation Board Kit: smarc-rzg3s
 	
 Common targets are:  
 * core-image-minimal  
