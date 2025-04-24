@@ -59,16 +59,13 @@ Common targets are:
 
 	
 ### 2. Manual Method:  
-1. Setup the environment with the following command: 
-	source poky/oe-init-build-env  
-
-2. Checkout the tag for the relevant BSP version. The supported versions are:   
+1. Checkout the tag for the relevant BSP version. The supported versions are:   
 	`BSP-3.0.6 BSP-3.0.6-update1 BSP-3.0.6-update2 BSP-3.0.6-update3 BSP-3.0.6-update4 `
    
    Use the following command to update the submodules:  
    `git submodule update --init --recursive`
    
-3. Prepare the configuration files for the target board. Run the commands below in build directory. Please replace _**board**_ by the name below according to your requirement:  
+2. Prepare the configuration files for the target board. Run the commands below in build directory. Please replace _**board**_ by the name below according to your requirement:  
 
 	HiHope RZ/G2H board, HiHope RZ/G2M board, HiHope RZ/G2N board, EK874 RZ/G2E board: hihope-rzg2h  
 	RZ/G2L,RZ/G2LC,RZ/G2UL Evaluation Board Kit PMIC version: rzg2l  
@@ -78,7 +75,7 @@ Common targets are:
 	
 	`TEMPLATECONF=$PWD/meta-renesas/meta-<board>/docs/template/conf/ source poky/oe-init-build-env build`
 
-4. If you want to add support for panfrost, please run the following command within the build directory:  
+3. If you want to add support for panfrost, please run the following command within the build directory:  
 	`bitbake-layers add-layer meta-rz-panfrost`  
 	
    Afterwards, add the followng to build/conf/local.conf:  
@@ -87,7 +84,7 @@ Common targets are:
 	
 	`IMAGE_INSTALL_append += " mesa weston kmscube"`
 
-5. Build the image of your choice with the command:  
+4. Build the image of your choice with the command:  
 
 
 	`MACHINE=<machine> bitbake <target>`
