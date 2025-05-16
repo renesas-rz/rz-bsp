@@ -10,7 +10,7 @@ where:
         rzg2l rzg2lc rzg2ul rzv2l rzg2h rzg2m rzg2n ek874 rzfive rzg3s
 
     -v  version of BSP (default BSP-3.0.6)
-        BSP-3.0.6 BSP-3.0.6-update1 BSP-3.0.6-update2 BSP-3.0.6-update3 BSP-3.0.6-update4
+        BSP-3.0.6 BSP-3.0.6-update1 BSP-3.0.6-update2 BSP-3.0.6-update3 BSP-3.0.6-update4 BSP-3.0.7
 
     -p  enable panfrost graphics for supported boards (default disabled)
         Supported boards: rzg2l rzg2lc rzv2l"
@@ -21,7 +21,7 @@ unset bsp_version
 
 LIST="rzg2l rzg2lc rzg2ul rzv2l rzg2h rzg2m rzg2n ek874 rzfive rzg3s"
 PANFROST_LIST="rzg2l rzg2lc rzv2l"
-BSP_LIST="BSP-3.0.3 BSP-3.0.4 BSP-3.0.5"
+BSP_LIST="BSP-3.0.6 BSP-3.0.6-update1 BSP-3.0.6-update2 BSP-3.0.6-update3 BSP-3.0.6-update4 BSP-3.0.7"
 G2L_family="rzg2l rzg2lc rzg2ul "
 V2L_family="rzv2l "
 G3S_family="rzg3s "
@@ -49,8 +49,8 @@ do
 	;;
 	v)	bsp_version=${OPTARG}
                 if ! exists_in_list "$BSP_LIST" $bsp_version; then
-                        echo -e "BSP version mentioned not supported or incorrect\nProceeding with BSP-3.0.3";
-			bsp_version="BSP-3.0.6"
+                        echo -e "BSP version mentioned not supported or incorrect\nProceeding with BSP-3.0.7";
+			bsp_version="BSP-3.0.7"
                 fi
 	;;
         p)	panfrost=${OPTARG}
@@ -72,7 +72,7 @@ fi
 
 if [ -z "$bsp_version" ]; then
 	echo -e "BSP version not specified\nProceeding with BSP-3.0.6-update4";
-	bsp_version="BSP-3.0.6-update4"
+	bsp_version="BSP-3.0.7"
 fi
 
 #echo "BOARD: $board"

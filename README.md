@@ -26,7 +26,7 @@ You can use the setup script: bsp_setup.sh:
 		rzg2l rzg2lc rzg2ul rzv2l rzg2h rzg2m rzg2n ek874
 		rzfive rzg3s
 
-	    -v  version of BSP (default BSP-3.0.6-update4)
+	    -v  version of BSP (default BSP-3.0.7)
 		BSP-3.0.6 BSP-3.0.6-update1 BSP-3.0.6-update2 BSP-3.0.6-update3 BSP-3.0.6-update4 BSP-3.0.7
 
 	    -p  enable panfrost graphics for supported boards (default disabled)
